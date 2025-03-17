@@ -8,6 +8,13 @@
     }
 }
 
+@media (max-width: 1080px) {
+    #myCarousel {
+        display: none;
+    }
+}
+
+
 html {
     position: relative;
     min-height: 100%;
@@ -16,4 +23,11 @@ html {
 body {
     margin-bottom: 60px;
     background-color: var(--light);
+}
+
+@media screen (min-width: 700px) {
+
+    .carousel {
+        display: none;
+    }
 }

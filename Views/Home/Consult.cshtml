@@ -1,37 +1,47 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Consult";
 }
 
-<h2>Consult</h2>
+<h2>Book a Consultation with your Lecturer.</h2>
 
 <div class="container mt-5">
-    <h2 class="mb-4">Book a Consultation</h2>
+    <h2 class="mb-4">Your details</h2>
 
     <form asp-action="SubmitConsultation" method="post" novalidate class="needs-validation">
-        <div class="mb-3">
-            <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="Firstname" placeholder=" Enter First Name" name="Firstname" required>
-            <div class="invalid-feedback">First Name is required.</div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="Firstname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="Firstname" placeholder="Enter First Name" name="Firstname" required>
+                <div class="invalid-feedback">First Name is required.</div>
+            </div>
+    
+            <div class="col-md-6 mb-3">
+                <label for="Lastname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="Lastname" placeholder="Enter Last Name" name="Lastname" required>
+                <div class="invalid-feedback">Last Name is required.</div>
+            </div>
         </div>
 
+        <!-- Email Address Field -->
         <div class="mb-3">
-            <label for="lastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="Lastname" placeholder=" Enter Last Name" name="Lastname" required>
-            <div class="invalid-feedback">Last Name is required.</div>
-        </div>
-
-        <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="Email" placeholder=" Enter Your Email" name="Email" required>
+            <label for="Email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="Email" placeholder="Enter Your Email" name="Email" required>
             <div class="invalid-feedback">Please enter a valid email address.</div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- Comment Field (Larger Textarea) -->
+        <div class="mb-3">
+            <label for="Comment" class="form-label">Comments</label>
+            <textarea class="form-control" id="Comment" placeholder="Type comment here" name="Comments" rows="4" required></textarea>
+            <div class="invalid-feedback">Please enter a comment.</div>
+        </div>
+
+        <button type="submit" class="btn btn-success" >Submit</button>
     </form>
 </div>
 
-<script>// Bootstrap validation
+<script>
+    // Bootstrap validation
     (function () {
         'use strict';
         var forms = document.querySelectorAll('.needs-validation');
@@ -45,4 +55,5 @@
                 form.classList.add('was-validated');
             }, false);
         });
-    })();</script>
+    })();
+</script>
