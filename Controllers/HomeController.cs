@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace _23708795_INF272_Practical3.Controllers
+namespace S1L05_RWD.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,10 +20,14 @@ namespace _23708795_INF272_Practical3.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Schedule()
         {
-            ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Consult()
+        {
             return View();
         }
     }
